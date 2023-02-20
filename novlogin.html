@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32&times;32" href="Abstract Letter Q Logo.jfif">
+    <title>Designed Login page</title>
+<link rel="stylesheet" href="novlogin.css">
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100hv;
+    background:#ffd6d6;
+    background-size: cover;
+    color: white;  
+    
+}
+
+.container{
+    position: relative;
+    width: 450px;
+    height: 420px;
+    background: rgb(255, 192, 222);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 10%;
+
+}
+@keyframes anim{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+.container::before, .container::after{
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background-image: conic-gradient(transparent,transparent,transparent, rgb(6, 84, 158));
+    animation: anim 3s linear infinite;
+}
+.container::after{
+    animation-delay: -2s;
+    background-image: conic-gradient(transparent,transparent,transparent, rgb(134, 32, 13));
+}
+.container .form{
+    position: absolute;
+    inset: 5px;
+    background: white;
+    color: white;
+    font-size: 12px;
+    z-index: 1;
+    border-radius: 5px;
+    padding: 50px 40px;
+
+}
+
+.form .title{
+    color: black;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 10px 140px 40px;
+    font-style: italic;
+
+}
+
+.form .input-box{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    border: solid 1px black;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px #cf5656, 0px 0px 30px #cb5353;
+    margin-bottom: 30px;
+}
+.form .input-box input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    color: black;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+
+.form .input-box .s-title{
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    color: black;
+    background: white;
+    padding: 6px;
+    font-size: 16px;
+}
+ .form .checkbox .pwd{
+    position: relative;
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    border: solid 2px black;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+ }
+ .form .checkbox .pwd::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background-color: black;
+    
+ }
+ .form .submit{
+    outline: none;
+    background: rgb(186, 49, 25);
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 5pxrgb(186, 49, 25), 0px 0px 30px rgb(186, 49, 25);
+    float: right;
+    margin-top: 20px;
+    cursor: pointer;
+ }
+ .info{
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: black;
+ }
+
+ button a{
+    color: black;
+    font-size: 15px;
+ }
+
+ button:hover{
+    background-color: azure;
+ }
+
+
+</style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="/login" class="form" method="post">
+            <div class="title">   Login </div>
+
+            <div class="input-box">
+                <input type="text" class="user" name="username">
+                <span class="s-title">Username</span>
+            </div>
+            <div class="input-box">
+                <input type="password" class="Password" name="password">
+                <span class="s-title">Password</span>
+            </div>
+
+            <div class="info">By signing-in your agree to Bnovel's  <span><a href="https://www.amazon.co.uk/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=1040616">Conditions of Use & Sale.</a></span>Please see our <span><a href="https://www.amazon.co.uk/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=1040616">Privacy Notice</a></span>,our 
+                <span><a href="https://www.amazon.co.uk/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=1040616">Privacy Notice</a></span> and our <span><a href="https://www.amazon.co.uk/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=1040616">Interest-Based Ads Notice.</a></span></div>
+            <div class="checkbox">
+                <span class="info">Forgot your Password?</span><br>
+                <span class="info">Not a member of Open Library? <a href="">Sign up now</a>.</span>
+
+            </div>
+            <button class="submit"><a href="https://www.youtube.com/">Login</a></button>
+        </form>
+    </div>
+</body>
+</html>
